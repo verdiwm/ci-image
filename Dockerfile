@@ -8,3 +8,4 @@ ENV RUSTUP_HOME="/root/.rustup"
 ENV CARGO_HOME="/root/.cargo"
 
 RUN source "$CARGO_HOME/env" && rustup default stable
+RUN curl -LsSf https://get.nexte.st/latest/linux | tar zxf - -C ${CARGO_HOME:-~/.cargo}/bin
